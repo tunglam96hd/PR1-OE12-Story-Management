@@ -1,5 +1,6 @@
 # PR1-OE12-Story-Management
-library-management Library Management
+
+Story-Management
 
 Members: 
 1, Phạm Tùng Lâm  
