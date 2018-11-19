@@ -1,2 +1,12 @@
 en:
-  hello: "Hello world"
+  layouts:
+    navigation:
+      search: "Search"
+    header:
+      web: "Web Truyen Online"
+      home: "Home"
+      help: "Help"
+      login: "Log in"
+    footer:
+      about: "About"
+      contact: "Contact"
