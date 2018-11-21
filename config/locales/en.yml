@@ -1,7 +1,5 @@
 en:
   layouts:
-    navigation:
-      search: "Search"
     header:
       web: "Web Truyen Online"
       home: "Home"
@@ -10,3 +8,15 @@ en:
     footer:
       about: "About"
       contact: "Contact"
+  static_pages:
+    home:
+      search: "Search"
+    help:
+      please: "Please access:"
+      help: "for help"
+      help1: "Help"
+    about:
+      about: "About"
+    contact:
+      contact1: "Contact"
+

@@ -24,7 +24,16 @@ nav.group{
   font-size: 15px;
 }
 
-nav.i18n{
+#contact{
+  margin-top: 50px;
+  text-align: center;
+}
+
+#help{
+  margin-top: 50px;
+}
+
+#about{
   margin-top: 50px;
 }
 
@@ -38,6 +47,10 @@ footer {
 footer ul {
   float: right;
   list-style: none;
+}
+
+footer a:hover {
+  color: $color-red;
 }
 
 footer ul li {
