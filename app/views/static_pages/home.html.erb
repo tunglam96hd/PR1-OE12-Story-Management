@@ -1,2 +1,13 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<nav class = "group">
+  <ul class="nav navbar-nav navbar-right">
+    <li><%= link_to t(".truyencuoi"), "#" %></li>
+    <li><%= link_to t(".truyenteen"), "#" %></li>
+    <li><%= link_to t(".truyenngungon"), "#" %></li>
+    <li><%= link_to t(".truyenngan"), "#" %></li>
+    <li><%= link_to t(".truyenngontinh"), "#" %></li>
+  </ul>
+  <form class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" type="search" placeholder= <%= t ".search" %> aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit"> <%= t ".search" %></button>
+  </form>
+</nav>
