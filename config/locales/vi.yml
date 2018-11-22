@@ -5,6 +5,7 @@ vi:
       home: "Trang chủ"
       help: "Trợ giúp"
       login: "Đăng nhập"
+      story: "Tổng hợp truyện"
     footer:
       about: "About"
       contact: "Liên Hệ"
@@ -30,4 +31,6 @@ vi:
     about:
       about: "Giới thiệu"
       web: "Website được thực hiện bởi 2 thành viên là : Nguyễn Tuấn Anh và Phạm Tùng Lâm"
-
+  story:
+    new:
+      story: "Stories"

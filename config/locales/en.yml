@@ -5,11 +5,18 @@ en:
       home: "Home"
       help: "Help"
       login: "Log in"
+      story: "Stories"
+      sign_up: "Sign up"
     footer:
       about: "About"
       contact: "Contact"
   static_pages:
     home:
+      truyencuoi: "Truyện Cười"
+      truyenteen: "Truyện Teen"
+      truyenngungon: "Truyện Ngụ Ngôn"
+      truyenngan: "Truyện Ngắn"
+      truyenngontinh: "Truyện Ngôn Tình"
       search: "Search"
     help:
       please: "Please access:"
@@ -17,6 +24,23 @@ en:
       help1: "Help"
     about:
       about: "About"
+      welcome: "Welcome to our Website Story"
+      post: "If you want to post your story then"
+      sign_up: "Sign up now!"
     contact:
       contact1: "Contact"
-
+    contact:
+      contact1: "Contact"
+  story:
+    new:
+      story: "Stories"
+  members:
+    new:
+      create_account: "Create my account"
+      sign_up: "Sign up"
+    create:
+      welcome: "Welcome to the Web Story!"
+      notfound: "Not found"
+  shared:
+    error_messages:
+      the_form: "The form contains"
