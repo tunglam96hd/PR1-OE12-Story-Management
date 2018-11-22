@@ -7,6 +7,11 @@ en:
       login: "Log in"
       story: "Stories"
       sign_up: "Sign up"
+      log_out: "Log out"
+      settings: "Settings"
+      profile: "Profile"
+      members: "Members"
+      account: "Account"
     footer:
       about: "About"
       contact: "Contact"
@@ -44,3 +49,11 @@ en:
   shared:
     error_messages:
       the_form: "The form contains"
+  sessions:
+    create:
+      invalid: "Invalid email/password combination"
+    new:
+      remember: "Remember me on this computer"
+      log_in: "Log in"
+      new_member: "New member?"
+      sign_up: "Sign up now!"
