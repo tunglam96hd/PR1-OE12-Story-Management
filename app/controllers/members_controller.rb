@@ -1,6 +1,6 @@
 class MembersController < ApplicationController
   before_action :load_member, only: %i(show)
-  
+
   def show; end
 
   def new
@@ -10,6 +10,7 @@ class MembersController < ApplicationController
   def create
     @member = Member.new member_params
     if @member.save
+      log_in @member
       flash[:success] = t ".welcome"
       redirect_to @member
     else
