@@ -45,7 +45,19 @@ en:
       sign_up: "Sign up"
     create:
       welcome: "Welcome to the Web Story!"
+    edit:
+      edit: "Edit member"
+      update: "Update your profile"
+      save_changes: "Save changes"
+      change: "Change"
+    update:
+      profile_update: "Profile updated"
+    index:
+      all_members: "All members"
+      please_login: "Please log in."
       notfound: "Not found"
+    form:
+      confirmation: "Confirmation"
   shared:
     error_messages:
       the_form: "The form contains"

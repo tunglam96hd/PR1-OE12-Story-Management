@@ -1,5 +1,7 @@
 class Member < ApplicationRecord
   attr_accessor :remember_token
+  scope :by_order, ->{order name: :asc}
+  scope :by_attributes, ->{select :id, :name, :email}
   has_many :follows
   has_many :stories, through: :follows
 
@@ -9,8 +11,8 @@ class Member < ApplicationRecord
   validates :email, presence: true, length: {maximum: Settings.Member.email.maximum},
     format: {with: VALID_EMAIL_REGEX},
     uniqueness: {case_sensitive: false}
-  validates :password, presence: true, length: {minimum: Settings.Member.password.minimum}
   has_secure_password
+  validates :password, presence: true, length: {minimum: Settings.Member.password.minimum}, allow_nil: true
 
   class << self
     def digest string
