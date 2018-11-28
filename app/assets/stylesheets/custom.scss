@@ -2,6 +2,7 @@
 @import 'bootstrap';
 @import 'color';
 
+
 #logo{
   float: left;
   margin-left: -100px;
@@ -25,14 +26,12 @@
 }
 
 nav.group{
-  padding-top: 40px;
-  margin-right: 500px;
+  margin-right: 560px;
   font-size: 15px;
 }
 
-#contact{
-  margin-top: 50px;
-  text-align: center;
+nav.group a {
+  color: $color-blue;
 }
 
 footer ul {
@@ -243,3 +242,49 @@ input {
     border-bottom: 1px solid $gray-lighter;
   }
 }
+
+img{
+  width: 150px;
+  height: 200px;
+  image-rendering: pixelated;
+}
+
+#content {
+  color: $color-blue;
+  font-size: 30px;
+}
+
+#contentleft {
+  width: 840px;
+  border: ridge;
+  float: left;
+  background: $color-xam;
+}
+
+#sidebar{
+  float: right;
+  width: 290px;
+  border: ridge;
+  background: $color-xam;
+
+}
+ #name{
+ color: $color-blue;
+ font-size: 30px;
+ }
+
+#title{
+  color: $color-blue;
+}
+
+#title1{
+  width: 1200px;
+  height: 200px;
+  box-sizing: content-box;
+  margin-top: 40px;
+  border: 2px solid black;
+  background: blue;
+  text-align: center;
+  font-size: 50px;
+}
+
