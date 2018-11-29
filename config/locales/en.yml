@@ -12,6 +12,7 @@ en:
       profile: "Profile"
       members: "Members"
       account: "Account"
+      post: "Post Story"
     footer:
       about: "About"
       contact: "Contact"
@@ -36,13 +37,20 @@ en:
       contact1: "Contact"
     contact:
       contact1: "Contact"
-  story:
+  stories:
+    index:
+      all_stories: "All Stories"
     new:
       story: "Stories"
+      post_stories: "Post Stories"
+    show:
+      notfound: "Not found"
+    create:
+      post: "You have successfully posted the story"
   members:
     new:
       create_account: "Create my account"
-      sign_up: "Sign up"
+      signup: "Sign up"
     create:
       welcome: "Welcome to the Web Story!"
     edit:
