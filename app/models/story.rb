@@ -5,4 +5,9 @@ class Story < ApplicationRecord
   has_many :categories, through: :category_stories
   has_many :follows
   has_many :members, through: :follows
+
+  validates :name, presence: true, length: {maximum: Settings.Story.name.maximum}
+  validates :image, presence: true, length: {maximum: Settings.Story.image.maximum}
+  validates :describe, presence: true, length: {minimum: Settings.Story.describe.minimum}
+  validates :author_id, :member_id, presence: true
 end

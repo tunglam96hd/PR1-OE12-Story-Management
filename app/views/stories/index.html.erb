@@ -1,7 +1,7 @@
 <% provide :title, t(".all_stories") %>
 <h1><%= t ".all_stories" %></h1>
-<%= paginate @members %>
+<%= paginate @stories %>
 <ul class="members">
-  <%= render @story %>
+  <%= render @stories %> 
 </ul>
-<%= paginate @members %>
+<%= paginate @stories %>

@@ -15,3 +15,10 @@ links:
   avatar_email: "http://gravatar.com/emails"
 paginate:
   per_page: 7
+Story:
+  name:
+    maximum: 20
+  image:
+    maximum: 20
+  describe:
+    minimum: 20
