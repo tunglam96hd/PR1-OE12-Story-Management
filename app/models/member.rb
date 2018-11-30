@@ -4,7 +4,6 @@ class Member < ApplicationRecord
   scope :by_attributes, ->{select :id, :name, :email}
   has_many :follows
   has_many :stories, through: :follows
-
   before_save {email.downcase!}
   validates :name, presence: true, length: {maximum: Settings.Member.name.maximum}
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
@@ -19,7 +18,7 @@ class Member < ApplicationRecord
       cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST : BCrypt::Engine.cost
       BCrypt::Password.create string, cost: cost
     end
-    
+
     def new_token
       SecureRandom.urlsafe_base64
     end

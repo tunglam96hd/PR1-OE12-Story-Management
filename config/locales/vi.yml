@@ -5,7 +5,6 @@ vi:
       home: "Trang chủ"
       help: "Trợ giúp"
       login: "Đăng nhập"
-      story: "Tổng hợp truyện"
     footer:
       about: "About"
       contact: "Liên Hệ"
@@ -19,6 +18,8 @@ vi:
       search: "Tìm Kiếm"
       english: "Tiếng Anh"
       vietnam: "Tiếng Việt"
+      truyenlove: "Những truyện được yêu thích nhất"
+      truyennew: "Những bài viết mới"
     help:
       please: "Vui lòng truy cập:"
       help: "Để được trợ giúp"
@@ -31,6 +32,19 @@ vi:
     about:
       about: "Giới thiệu"
       web: "Website được thực hiện bởi 2 thành viên là : Nguyễn Tuấn Anh và Phạm Tùng Lâm"
+    list_truyen:
+      logo: "Logo truyện"
   story:
     new:
       story: "Stories"
+    show:
+      notfound: "không tìm thấy"
+  sessions:
+    new:
+      log_in: "Đăng nhập"
+      sign_up: "Đăng kí"
+  members:
+    new:
+      create_account: "Tạo tài khoản"
+    index:
+      all_members: "Tất cả các thành viên"
