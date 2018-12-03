@@ -12,6 +12,7 @@ en:
       members: "Members"
       account: "Account"
       post: "Post Story"
+      story: "Stories"
     footer:
       about: "About"
       contact: "Contact"
@@ -74,3 +75,27 @@ en:
     new:
       log_in: "Log in"
       sign_up: "Sign up"
+      new_member: "New member?"
+      sign_up: "Sign up now!"
+  comments:
+    form_edit:
+      edit_comment: "Compose edit comment..."
+      edit: "Edit"
+    new:
+      commnent: "Commnent"
+      compose_comment: "Compose comment..."
+    update:
+      success: "Edit success"
+      failed: "Edit failed"
+    comment:
+      you_sure: "You sure?"
+      delete: "delete"
+      edit: "edit"
+      comment: "Comment at"
+      ago: "ago."
+    create:
+      success: "Create success"
+      failed: "Create failed"
+    destroy:
+      success: "Comment deleted"
+      failed: "Delete failed"
