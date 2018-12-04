@@ -4,6 +4,8 @@ class Member < ApplicationRecord
   scope :by_attributes, ->{select :id, :name, :email}
   has_many :follows
   has_many :stories, through: :follows
+  has_many :comments, dependent: :destroy
+
   before_save {email.downcase!}
   validates :name, presence: true, length: {maximum: Settings.Member.name.maximum}
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i

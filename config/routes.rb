@@ -10,8 +10,9 @@ Rails.application.routes.draw do
   delete "/logout", to: "sessions#destroy"
   get  "/post", to: "stories#new"
   post "/post", to: "stories#create"
-  resources :stories
   get "/load_story", to: "story#selectstory", as: "load_story"
+  resources :stories
   resources :story
   resources :members
+  resources :comments
 end

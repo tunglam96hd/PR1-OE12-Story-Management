@@ -22,3 +22,5 @@ Story:
     maximum: 20
   describe:
     minimum: 20
+Comment:
+  content: 140
