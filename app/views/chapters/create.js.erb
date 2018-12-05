@@ -1,0 +1,6 @@
+<% if @chapter.errors.any? %>
+  $('.error-chapter').html('<%= t "chapter.validate.content" %>');
+<% else %>
+  $('#list-chapter').append('<%= j render "chapter", chapter: @chapter %>');
+  $('.chapter-new').val('');
+<% end %>

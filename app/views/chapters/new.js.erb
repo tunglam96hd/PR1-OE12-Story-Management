@@ -1,0 +1,4 @@
+<% if params[:story_id].present? %>
+  $('#chapter-new').html('<%= j render 'chapters/new', story_id: params[:story_id] %>');
+  $('#btn-new-chapter').hide();
+<% end %>

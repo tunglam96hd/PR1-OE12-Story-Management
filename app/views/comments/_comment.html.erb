@@ -1,12 +1,27 @@
-<div>
-  <%= link_to comment.member_name, comment.member %>
-  <br>
-  <%= comment.content %>
-  <% if current_member?(comment.member) %>
-    <%= link_to t(".edit"), edit_comment_path(comment), remote: true %>
-    <%= link_to t(".delete"), comment, method: :delete, data: {confirm: t(".you_sure")} %>
-  <% end %>
-  <br>
-  <%= t ".comment" %> <%= time_ago_in_words(comment.created_at) %> <%= t ".ago" %> 
-  <div id="comment-<%= comment.id %>"></div>
+<div class="row" id="comment-<%= comment.id %>">
+  <div class="col-md-1">
+    <%= gravatar_for comment.member %>
+  </div>
+  <div class="col-md-11 margin-cmt">
+    <div class="commented-time row">
+      <div class="col-md-11">
+        <%= link_to comment.member_name, comment.member, class: "name-member" %>
+        <%= t ".comment" %> <%= time_ago_in_words(comment.created_at) %> <%= t ".ago" %>
+      </div>
+      <div class="col-md-1">
+        <% if current_member.admin? || current_member?(comment.member) %>
+          <%= link_to edit_comment_path(comment), remote: true do %>
+            <span class="glyphicon glyphicon-pencil"></span>
+          <% end %>
+          <%= link_to comment, method: :delete, data: {confirm: t(".you_sure")}, remote: true do %>
+            <span class="glyphicon glyphicon-trash"></span>
+          <% end %>
+        <% end %>
+      </div>
+    </div> 
+    <div class="content-comment">
+      <%= comment.content %>
+    </div>
+    <div id="comment-<%= comment.id %>"></div>
+  </div>
 </div>

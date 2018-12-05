@@ -6,11 +6,11 @@ class Story < ApplicationRecord
   has_many :follows
   has_many :members, through: :follows
   has_many :comments, dependent: :destroy
+  has_many :chapters, dependent: :destroy
 
   validates :name, presence: true, length: {maximum: Settings.Story.name.maximum}
-  validates :image, presence: true, length: {maximum: Settings.Story.image.maximum}
+  mount_uploader :image, ImageUploader
   validates :describe, presence: true, length: {minimum: Settings.Story.describe.minimum}
-  validates :author_id, :member_id, presence: true
   scope :filter, -> (type){where name: type}
 
   delegate :name, to: :author, prefix: true

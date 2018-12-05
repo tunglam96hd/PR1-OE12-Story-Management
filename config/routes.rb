@@ -16,7 +16,7 @@ Rails.application.routes.draw do
     resources :stories
     resources :story
     resources :comments
-
+    resources :chapters
     resources :relationships, only: [:create, :destroy]
     resources :members do
       member do

@@ -1,0 +1,7 @@
+<% if @comment.errors.any? %>
+  $('.error-comment').html('<%= t "comments.validate.content" %>');
+<% else %>
+  $('#list-comment').prepend('<%= j render "comment", comment: @comment %>');
+  $('.comment-new').val('');
+  $('.error-comment').html('');
+<% end %>

@@ -26,6 +26,7 @@ en:
       search: "Search..."
       truyenlove: "Những truyện được yêu thích nhất"
       truyennew: "Những bài viết mới"
+      home: "Home"
     help:
       please: "Please access:"
       help: "for help"
@@ -39,6 +40,9 @@ en:
       email: "Email:tuananh@gmail.com"
       contact1: "Contact"
   stories:
+    story:
+      delete: "delete"
+      you_sure: "You sure?"
     index:
       all_stories: "All Stories"
     new:
@@ -46,8 +50,18 @@ en:
       post_stories: "Post Stories"
     show:
       notfound: "Not found"
+      chapter_new: "Chapter new"
+      read: "Read the story"
+      comment: "Comments"
+      author: "Author:"
+      story: "Story:"
+      post: "Post the chapter"
+      new_chapter: "New chapter"
     create:
       post: "You have successfully posted the story"
+    destroy:
+      success: "Comment deleted"
+      failed: "Delete failed"
   members:
     new:
       create_account: "Create my account"
@@ -77,7 +91,11 @@ en:
       sign_up: "Sign up"
       new_member: "New member?"
       sign_up: "Sign up now!"
+    create:
+      invalid: "Invalid email/password combination"
   comments:
+    validate:
+      content: "Content can't be blank"
     form_edit:
       edit_comment: "Compose edit comment..."
       edit: "Edit"
@@ -96,6 +114,23 @@ en:
     create:
       success: "Create success"
       failed: "Create failed"
+      please_login: "Please login"
     destroy:
       success: "Comment deleted"
       failed: "Delete failed"
+  chapters:
+    chapter:
+      delete: "delete"
+      you_sure: "You sure"
+      ago: "ago"
+    new:
+      post: "Post"
+      content: "Content chapter"
+    create:
+      success: "Create success"
+      failed: "Create failed"
+      please_login: "Please login"
+    destroy:
+      success: "Comment deleted"
+      failed: "Delete failed"
+      notfound: "Not found"

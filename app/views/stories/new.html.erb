@@ -7,13 +7,12 @@
       <%= t.label :name %>
       <%= t.text_field :name, class: "form-control" %>
       <%= t.label :image %>
-      <%= t.text_field :image, class: "form-control" %>
+      <span class="picture">
+        <%= t.file_field :image, accept: "image/jpeg,image/gif,image/png" %>
+      </span>
       <%= t.label :describe %>
       <%= t.text_field :describe, class: "form-control" %>
-      <%= t.label :author_id %>
-      <%= t.text_field :author_id, class: "form-control" %>
-      <%= t.label :member_id %>
-      <%= t.text_field :member_id, class: "form-control" %>
+      <%= t.select :author_id, author, class: "form-control" %>
       <%= t.submit t(".post_stories"), class: "btn btn-primary" %>
     <% end %>
   </div>
