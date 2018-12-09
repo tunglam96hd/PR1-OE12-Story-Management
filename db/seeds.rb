@@ -13,3 +13,10 @@ Story.create(
   image: nil,
   author_id: 1,
   member_id: 1)
+
+members = Member.all
+members  = Member.first
+following = stories[1..5]
+followers = stories[2..4]
+following.each { |followed| member.follow(followed) }
+followers.each { |follower| follower.follow(member) }

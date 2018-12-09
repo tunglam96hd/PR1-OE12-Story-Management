@@ -3,8 +3,14 @@ class Member < ApplicationRecord
   scope :by_order, ->{order name: :asc}
   scope :by_attributes, ->{select :id, :name, :email}
   has_many :follows
-  has_many :stories, through: :follows
   has_many :comments, dependent: :destroy
+  has_many :stories, dependent: :destroy
+  has_many :active_relationships, class_name: "Relationship",
+    foreign_key: "follower_id", dependent: :destroy
+  has_many :passive_relationships, class_name: "Relationship",
+    foreign_key: "followed_id", dependent: :destroy
+  has_many :following, through: :active_relationships, source: :followed
+  has_many :followers, through: :passive_relationships, source: :follower
 
   before_save {email.downcase!}
   validates :name, presence: true, length: {maximum: Settings.Member.name.maximum}
