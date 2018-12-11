@@ -21,11 +21,9 @@
         remote: true %>
     </li>
   </ul>
-  <form class="form-inline my-2 my-lg-0">
-    <input class="form-control mr-sm-2" type="search" placeholder= <%= t ".search" %> aria-label="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit"> <%= t ".search" %>
-    </button>
-  </form>
+  <%= form_for "", url: root_path, role: t(".search"), method: :get do %>
+  <%= text_field_tag :search, @search_term, placeholder: t(".search") %>
+  <% end %>
 </nav>
 <div id = contentleft>
   <h2 id = "content"> <%= t ".truyenlove" %> </h2>
