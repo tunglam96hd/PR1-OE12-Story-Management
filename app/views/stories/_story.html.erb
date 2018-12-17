@@ -1,3 +1,8 @@
 <li>
   <%= link_to story.name, story %>
+  <% if current_member.admin? && current_member?(story.member) %>
+    <%= link_to story, method: :delete, data: {confirm: t(".you_sure")} do %>
+      <span class="glyphicon glyphicon-trash"></span>
+    <% end %>
+  <% end %>
 </li>

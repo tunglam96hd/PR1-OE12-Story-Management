@@ -1,0 +1,10 @@
+<div class="row" id="chapter-<%= chapter.id %>">
+  <div>
+    <%= link_to chapter.name, chapter %>
+    <% if current_member.admin? %>
+      <%= link_to chapter, method: :delete, data: {confirm: t(".you_sure")}, remote: true do %>
+        <span class="glyphicon glyphicon-trash"></span>
+      <% end %>
+    <% end %>
+  </div>
+</div>

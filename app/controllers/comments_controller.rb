@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
   before_action :load_comment, only: %i(edit update destroy)
-  before_action :correct_member, only: %i(destroy)
+  before_action :logged_in_member, only: %i(create destroy)
 
   def new
     @comment = Comment.new
@@ -9,11 +9,10 @@ class CommentsController < ApplicationController
   def create
     @comment = current_member.comments.build comment_params
     if @comment.save
-      flash[:success] = t ".success"
+      flash.now[:success] = t ".success"
     else
-      flash[:danger] = t ".failed"
+      flash.now[:danger] = t ".failed"
     end
-    redirect_to @comment.story
   end
 
   def edit;end
@@ -29,11 +28,10 @@ class CommentsController < ApplicationController
 
   def destroy
     if @comment.destroy
-      flash[:success] = t ".success"
+      flash.now[:success] = t ".success"
     else
-      flash[:danger] = t ".failed"
+      flash.now[:danger] = t ".failed"
     end
-    redirect_to @comment.story
   end
 
   private
@@ -47,9 +45,5 @@ class CommentsController < ApplicationController
     return if @comment
     redirect_to root_url
     flash[:danger] = t ".notfound"
-  end
-
-  def correct_member
-    redirect_to root_url unless current_member? @comment.member
   end
 end

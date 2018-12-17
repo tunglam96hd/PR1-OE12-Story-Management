@@ -54,3 +54,4 @@ build-iPhoneSimulator/
 /config/secrets.yml
 /log/*
 .byebug_history
+/public/uploads/

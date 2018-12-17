@@ -4,7 +4,7 @@ class CreateMembers < ActiveRecord::Migration[5.1]
       t.string :name
       t.string :email
       t.string :password
-      t.boolean :admin
+      t.boolean :admin, default: false
 
       t.timestamps
     end

@@ -3,6 +3,6 @@ class Comment < ApplicationRecord
   belongs_to :member
   validates :content, presence: true, length: {maximum: Settings.Comment.content}
 
-  scope :by_order, ->{order created_at: :desc}
+  scope :order_by, ->(direction){order created_at: direction}
   delegate :name, to: :member, prefix: true
 end

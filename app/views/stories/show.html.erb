@@ -1,20 +1,38 @@
 <% provide :title, @story.name %>
-<div class="row">
-  <aside class="col-md-4">
-    <section class="member_info">
-      <h1>
-        <%= @story.name %>
-        <%= @story.image %>
-        <%= @story.describe %>
-        <%= @story.author_name %>
-      </h1>
-    </section>
-    <div>
-      <%= render @comments %>
-    </div>
-    <div>
-      <%= render partial: "comments/new", locals:{story: @story} %>
-    </div>
+<h1>
+  <%= t ".story" %> <%= @story.name %>
+</h1>
+<div class="image_story">
+  <%= image_tag @story.image.url if @story.image? %>
+</div>
+<div class="describe_story">
+  <%= @story.describe %>
+  <div>
+    <%= t ".author" %> <%= @story.author_name %>
   </div>
-  </aside>
+</div>
+<div class="read_chapter">
+  <b><%= t ".read" %></b>
+  <div id="list-chapter">
+    <%= render @chapters %>
+  </div>
+  <%= paginate @chapters %>
+</div>
+<div class="new_chapter">
+  <% if current_member.admin? %>
+    <b><%= t ".post" %></b>
+    <%= link_to t(".new_chapter"), new_chapter_path(story_id: @story.id), id: "btn-new-chapter", remote: true %>
+    <div id="chapter-new"></div>
+  <% end %>
+</div>
+<div class="row">
+  <b><%= @comments.size %> <%= t ".comment" %></b>
+  <hr>
+  <div>
+    <%= render "comments/new", story: @story %>
+  </div>
+  <div id="list-comment">
+    <%= render @comments %>
+  </div>
+  <%= paginate @comments %>
 </div>

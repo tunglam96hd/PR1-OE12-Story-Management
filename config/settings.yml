@@ -17,10 +17,16 @@ paginate:
   per_page: 7
 Story:
   name:
-    maximum: 20
-  image:
-    maximum: 20
+    maximum: 40
   describe:
     minimum: 20
 Comment:
   content: 140
+upload:
+  width: 500
+  height: 300
+Chapter:
+  content:
+    minimum: 20
+  name:
+    maximum: 20

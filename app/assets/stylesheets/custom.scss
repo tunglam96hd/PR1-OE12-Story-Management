@@ -192,7 +192,7 @@ footer ul li {}
 /* forms */
 
 input, textarea, select, .uneditable-input {
-  border: 1px solid #bbb;
+  border: 1px solid $white;
   width: 100%;
   margin-bottom: 15px;
   @include box_sizing;
@@ -276,8 +276,77 @@ input {
   height: 200px;
   box-sizing: content-box;
   margin-top: 40px;
-  border: 2px solid black;
-  background: blue;
+  border: 2px solid $black;
+  background: $color-blue;
   text-align: center;
   font-size: 50px;
+}
+
+.image_story{
+  width: 500px;
+  height: 300px;
+  float: left;
+}
+
+.describe_story{
+  margin-left: 50px;
+  width: 500px;
+  height: 300px;
+  float: left;
+}
+
+.read_chapter{
+  width: 500px;
+  height: 300px;
+  float: left;
+}
+.comment{
+  margin-left: 50px;
+  width: 300px;
+  height: 300px;
+  float: left;
+}
+
+.new_chapter{
+  width: 400px;
+}
+
+.name-member {
+  font-weight: 600;
+  white-space: nowrap;
+  color: $blue-a;
+  cursor: pointer;
+}
+
+.commented-time {
+  color: $white-gray;
+}
+
+.comment-new {
+  border: 1px solid $white-gray-a;
+  min-height: 70px;
+  max-height: 70px;
+  line-height: 4em;
+  text-indent: 10px;
+}
+
+.content-comment {
+  margin-top: 10px;
+  border: 1px solid $white-gray-b;
+  border-radius: 5px;
+  line-height: 4em;
+  text-indent: 10px;
+}
+
+.margin-cmt {
+  margin-top: 10px;
+}
+
+.error-comment {
+  color: $red;
+  font-size: 14px;
+}
+
+.label-chapter {
+  display: inline-block;
 }
